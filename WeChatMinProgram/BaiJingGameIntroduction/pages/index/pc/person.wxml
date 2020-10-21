@@ -1,0 +1,16 @@
+<!--pages/index/pc/person.wxml-->
+<!-- <text>pages/index/pc/person.wxml</text> -->
+<swiper-item style="overflow: scroll;">
+				<scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"  bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
+					<view class="swiper-item">
+            <block wx:for="{{taskList}}">
+              <view class="post-container">
+                <image src="{{item.imgSrc}}" class="post-img"></image>
+                <text class="post-title">{{item.title}}</text>
+              </view>
+            </block>
+            
+          </view>
+					<view class="swiper-item">到底了～～图片均未获得授权</view>
+				</scroll-view>
+</swiper-item>

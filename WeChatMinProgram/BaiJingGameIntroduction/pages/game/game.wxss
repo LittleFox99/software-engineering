@@ -1,0 +1,59 @@
+/* pages/game/game.wxss */
+page{
+  background-color: #b4a992;
+}
+.score {
+  display: flex;
+  font-size: 1vh;
+}
+
+.scoredetail{
+  flex: 1;
+  height: 140rpx;
+  /* background:#ad9e5f; */
+  /*opacity: 0.6; */
+  margin: 50rpx 20rpx 40rpx 20rpx;
+  text-align: center;
+  border-radius: 25%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.scoredetail:last-child{
+  margin-right: 40rpx;
+}
+
+.scoredesc{
+  font-size: 0.9rem;
+  line-height: 50rpx;
+  margin-top: 10rpx;
+  color:black;
+}
+.scorenumber{
+  line-height: 60rpx;
+   font-size: 1.1rem;
+   margin-top: 5rpx;
+   color:black;
+}
+
+.board{
+  margin-left: 5rpx;
+  margin-bottom: 5rpx;
+}
+.rows{
+  margin-bottom:1rpx ;
+  padding:0rpx;
+  text-align:center;
+  flex-direction:row;
+  display:flex;
+}
+.cols{
+  margin: 5rpx;
+}
+.card{
+   width:  175rpx;
+   height: 237rpx;
+   padding:1rpx;
+   margin: 2rpx;
+}
+/* page{background: url('../images/gamebg.jpg') center top; } */

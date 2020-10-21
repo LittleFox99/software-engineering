@@ -1,0 +1,15 @@
+<!--pages/detail/article.wxml-->
+<view>
+  <image src="{{imgSrc}}" class="head-image"></image>
+  <view class="author-date">
+    <image src="{{avatar}}" class="avatar"></image>
+    <text class="author">{{author}}</text>
+    <text class="const-date">{{date}}</text>
+    <!-- <text class="date">{{article.date}}</text> -->
+  </view>
+ 
+  <text class="title">{{title}}</text>
+  <view class="horizon"></view>
+  <text class="detail">{{detail}}</text>
+  <!-- <text>pages/detail/article.wxml</text> -->
+</view>

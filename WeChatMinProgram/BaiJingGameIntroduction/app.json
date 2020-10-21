@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/tujian/tujian",
+    "data/gonglue",
+    "pages/index/pc/person",
+    "pages/detail/article",
+    "pages/game-index/gama-index",
+    "pages/game/game"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#b4a992",
+    "navigationBarTitleText": "百景游戏小攻略",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#b4a992",
+    "selectedColor": "#a0372a",
+    "borderStyle": "black",
+    "backgroundColor": "#ffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon-11.png",
+        "selectedIconPath": "images/icon-12.png"
+      },
+      {
+        "pagePath": "pages/game-index/gama-index",
+        "text": "翻牌小游戏",
+        "iconPath": "images/icon-11.png",
+        "selectedIconPath": "images/icon-12.png"
+      },
+      {
+        "pagePath": "pages/tujian/tujian",
+        "text": "布局",
+        "iconPath": "images/icon-11.png",
+        "selectedIconPath": "images/icon-12.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

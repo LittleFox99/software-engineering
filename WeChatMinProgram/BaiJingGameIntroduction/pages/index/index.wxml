@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view>
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  
+  <view class="lunbo-section">
+   
+    <swiper class='lunbo' indicator-dots='true' autoplay='true' interval='4000'>
+       <swiper-item> <image src='/images/lunbo-1.JPG'></image> </swiper-item>
+       <swiper-item> <image src='/images/lunbo-2.JPG'></image></swiper-item>
+       <swiper-item> <image src='/images/lunbo-3.JPG'></image> </swiper-item>
+       <swiper-item> <image src='/images/lunbo-4.JPG'></image> </swiper-item>
+       <swiper-item> <image src='/images/lunbo-5.JPG'></image> </swiper-item>
+      </swiper> 
+  </view>
+  <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>
+      <image src='/images/im-2.JPG'></image>
+      <text>
+        小攻略</text>
+    </view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>
+      <image src='/images/im-3.JPG'></image>
+      <text>
+        人物图鉴</text>
+    </view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+  
+  <swiper-item style="overflow: scroll;">
+    <scroll-view scroll-y refresher-enabled refresher-background="#F6F7F8" refresher-triggered="{{isRefresh}}"  bindrefresherrefresh="refresherpulling" bindscrolltolower="handleTolower">
+      <view class='swiper_con'>
+      <block wx:for="{{post_key}}">
+        <view class="post-container" bindtap="goDetailArticle" data-postid="{{item.postid}}">
+          <view class="post-author-date">
+            <image src="{{item.avatar}}" class="post-author"></image>
+            <text class="post-date">{{item.date}}</text>
+           </view>
+          <text class="post-title">{{item.title}}</text>
+          <image src="{{item.imgSrc}}" class="post-img"></image>
+          <text class="post-content">{{item.content}}</text>
+        </view>
+      </block>
+    </view>
+    </scroll-view>
+    <view class="swiper-item" >到底了～～图片与文章均未获得授权</view>
+  </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'>
+    <view class="weui-grids">
+        <view class="weui-grid" wx:for="{{grid}}" wx:key="name" bindtap="onItemClick" data-pcid="{{item.pcid}}">
+           
+            <view class='weui-grid__bg'>
+                    <view class="weui-grid__icon">
+                        <image src="{{item.icon}}" mode="scaleToFill" />
+                    </view>
+                    <text class="weui-grid__label">{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    </view>
+  </swiper-item> 
+</swiper>
+
+
+  
+</view>
